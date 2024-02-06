@@ -1,9 +1,20 @@
-<form action="https://fabform.io/f/hoarMdP" method="POST">
-    <label for="email">Email (required): </label>
-    <input id="email" type="email" name="email">
-    <label for="request">What can I draw for you today?:</label>
-    <textarea rows="4" id="request" type="text" name="request"></textarea>
-    <!-- add hidden Honeypot input to prevent spams -->
+<form 
+    class="d-block"
+    id = "my-form"
+    method="POST" 
+    action="https://script.google.com/macros/s/AKfycbyA_TI6Qagxahze_xoCrQ8yd-Rr1gGNfocUu0ltku7P2_IQTmV3LbxtOP-Rmd6BDc0x2g/exec"
+>
+    <div class="form-group mb-2">
+        <label for="Email">Email (required): </label>
+        <input class="form-control" name="Email" type="email" placeholder="Email" required>
+    </div>
+
+    <div class="form-group mb-2">
+        <label for="prompt">What can I draw for you? (required):</label>
+        <textarea class="form-control" rows="4" id="prompt" type="text" name="Prompt" placeholder="Prompt" required></textarea>
+        <small id="small_warning" class="form-text text-muted">Please limit to 1 request per person...</small>
+    </div>
+        
     <input type="hidden" name="_gotcha" style="display:none !important">
-    <button class="button-53" role="button" type="submit">Send</button>
+    <button class="mt-2 btn btn-lg btn-primary" role="button" type="submit">Submit</button>
 </form>

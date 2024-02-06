@@ -1,11 +1,11 @@
 ---
 ---
 
-// architect theme
-@import "{{ site.theme }}";
-
 // bootstrap
 @import "bootstrap-5.0.2/scss/bootstrap.scss";
+
+// architect theme
+@import "{{ site.theme }}";
 
 /* Some nice boilerplate CSS to tidy up your form */
 form {

@@ -1,16 +1,13 @@
 <div class="row">
-  {% assign image_files = site.static_files | where: "image", true %}
-  {% for myimage in image_files %}
+  {% for row in site.data.images_02052024 %}
     <div class="col-lg-3 col-md-6 col-sm-12">
-      {% if myimage.path contains '/assets/img/' %}
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-          <img src="{{ myimage.path | prepend: site.baseurl }}" class="card-img-bottom">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{row.Prompt}}</h5>
+          <p class="card-text"><small class="text-muted">{{row.Date}}</small></p>
         </div>
-      {% endif %}
+        <img src="{{ site.baseurl | append: 'assets/img/' | append: row.FileName }}" class="card-img-bottom">
+      </div>
     </div>
   {% endfor %}
 </div>

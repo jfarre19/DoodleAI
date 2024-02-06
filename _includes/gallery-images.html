@@ -6,7 +6,7 @@
           <h5 class="card-title">{{row.Prompt}}</h5>
           <p class="card-text"><small class="text-muted">{{row.Date}}</small></p>
         </div>
-        <img src="{{ site.baseurl | append: 'assets/img/' | append: row.FileName }}" class="card-img-bottom">
+        <img src="{{ row.FileName | prepend: 'assets/img/' | prepend: site.baseurl | prepend: site.url}}" class="card-img-bottom">
       </div>
     </div>
   {% endfor %}
